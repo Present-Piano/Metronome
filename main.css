@@ -1,0 +1,90 @@
+:root {
+    --black: #2A2525;
+    --white: #FFFFEA;
+    --background: #E1D7C3;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: var(--background);
+    font-family: 'Courier New', Courier, monospace;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.piano {
+    display: flex;
+}
+
+.white-key {
+    background-color: var(--white);
+    height: 200px;
+    width: 50px;
+    border: 2px solid black;
+}
+
+.black-key {
+    height: 100px;
+    width: 40px;
+    background-color: var(--black);
+    border: 2px solid black;
+}
+
+#Metronome {
+    margin-top: -15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#Metronome > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#Metronome > div:first-child > div {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.btn--control {
+    color: white;
+    background-color: deeppink;
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn--beat {
+    color: gray;
+    background-color: white;
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn--beat.on {
+    font-weight: bold;
+    color: deeppink;
+}
+
+.btn--beat.current {
+    background-color: deeppink;
+}
+
+.btn--beat.on.current {
+    color: white;
+}
